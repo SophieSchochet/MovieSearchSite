@@ -1,1 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Merriweather+Sans:wght@500&family=Poppins:wght@300;400&display=swap');
+header{
+    background-color: #CAF0F8;
+    color: #0077B6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 5em;
+    width: 100%;
+}
+.nav{
+padding-left: 3em;
+padding-right: 3em;
+display: flex;
+font-family: 'Poppins', sans-serif;
+    flex-direction: row;
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+}
+
+#search-text{
+    background-image:url("./assets/magnify.png");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-color: #90E0EF;
+    padding-left: 1.5em; 
+    height:2em;
+    width:12em;
+    border-radius: 5%;
+    border: .1em solid #0077B6;
+}
+#search-text::placeholder{
+    color:#0077B6;
+}
+#search-text:focus{
+    border: .1em solid #CAF0F8;
+}
+#tmdb-pic{
+    height: 2em;
+    width:12em;
+}
+body{
+    background-color: #023E8A;
+}
+.main-content{
+    width:80%;
+    margin-right: auto;
+    margin-left: auto;
+}
 
