@@ -102,18 +102,13 @@ body{
     color: #CAF0F8;
     align-items: center;
 }
-.clear{
-    border-radius: 5%;
-    margin-left: 2em;
-    width:5em;
-    height:2em;
-    background-color: #0077B6;
-}
+
 #clicked-img{
     width: 40%;
     height: auto;
     border: .1em solid black;
 }
+
 
 .close{
     position: absolute;
