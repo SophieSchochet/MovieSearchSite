@@ -19,6 +19,8 @@ loadPage();
 
 document.getElementById("close-expansion").addEventListener("click",() => {
     popUpContainer.classList.add("hidden");
+    theResults.classList.remove("blurred");
+    alert.classList.remove("hidden");
 });
 
 theForm.addEventListener("submit", (e) =>{
@@ -78,6 +80,8 @@ function showMovies(){
     newMovie.addEventListener("click",() => {
         bigImg.src = poster.src;
         popUpContainer.classList.remove("hidden");
+        theResults.classList.add("blurred");
+        alert.classList.add("hidden");
         expandedOverview.innerText = movies[i].overview;
         releaseDate.innerText = "Released: " + movieDate;
         expandedRating.innerText = movieRating;

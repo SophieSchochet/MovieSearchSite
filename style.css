@@ -6,27 +6,30 @@
 .nav{
     background-color: #CAF0F8;
     color: #0077B6;
-    position: absolute;
+    width: 100%;
+    position: fixed;
     top: 0;
     left: 0;
-    height: 5em;
-    width: 100%;
-padding-left: 3em;
-padding-right: 3em;
-display: grid;
+    height: 6em;
+    z-index: 100;
+    display: grid;
     align-items: center;
+    padding: 1em 2em 0em 2em;
     grid-template-columns: repeat(3, 1fr);
     justify-content: space-between;
 }
-
+.title-container{
+    width:fit-content;
+}
 #search-text{
     background-image:url("./assets/magnify.png");
     background-repeat: no-repeat;
     background-position: left center;
+    background-color: #CAF0F8;
     padding-left: 1.5em; 
     height:3em;
     width:15em;
-    border-radius: 5%;
+    border-radius: 5px;
     border: .2em solid #0077B6;
 }
 #search-text::placeholder{
@@ -44,17 +47,23 @@ body{
     background-color: #023E8A;
 }
 .main-content{
-    margin-top: 10em;
-   margin-right: 10%;
-   margin-left: 10%;
+    padding: 2em 5em 5em 5em;
+    display:flex;
+    justify-content: center;
 }
+.result-handler{
+margin-top: 10em;
+padding-left: 2em;
+}
+
 .movie{
-    width:8em;
-    height:12em;
+    width:12em;
+    height:16em;
     background-color: #0077B6;
     border: .2em solid #CAF0F8;
-    margin: 4em 2em 4em 2em;
+    margin: 5em 1.5em 5em 1.5em;
     text-align: center;
+    box-shadow: .5em .5em .5em .5em rgba(0, 0, 0, .4)
 }
 .poster{
     width:100%;
@@ -71,6 +80,10 @@ body{
 .hidden{
     display: none;
 }
+.blurred{
+    filter:blur(.5em);
+   
+}
 
 .expansion-container{
     position: absolute;
@@ -78,8 +91,11 @@ body{
     background-color: #0077B6;
     border: .2em solid #90E0EF;
     width:70%;
+    margin-left: auto;
+    margin-right: auto;
     height:auto;
     color:#CAF0F8;
+    box-shadow: inset;
 }
 .expanded-movie{
     text-align: center;
@@ -108,7 +124,6 @@ body{
     height: auto;
     border: .1em solid black;
 }
-
 
 .close{
     position: absolute;
