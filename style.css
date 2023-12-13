@@ -124,7 +124,7 @@ padding-left: 2em;
 }
 
 .expansion-container{
-    position: absolute;
+    position: fixed;
     top:20%;
     background-color: #0077B6;
     border: .2em solid #90E0EF;
