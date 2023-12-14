@@ -45,6 +45,9 @@ xhttp.onreadystatechange = function() {
             showMovies();
             }
         }
+     else if (this.readyState == 4) {
+        console.log(this.responseText);
+    }
 
 };
 xhttp.open("GET", defaultUrl +"&api_key=6d4ebf2688d963156a0d6cb9e7d1e729", true);
@@ -72,6 +75,8 @@ function showMovies(){
     }
     poster.src = posterUrl + posterPath;
     poster.alt = movieTitle;
+    poster.width = 150;
+    poster.height = 200;
     newMovie.appendChild(poster);
     let title = document.createElement("p");
     title.classList.add("movie-title");

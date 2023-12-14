@@ -1,39 +1,81 @@
-@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Merriweather+Sans:wght@500&family=Poppins:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Merriweather+Sans:wght@500&family=Poppins:wght@300;400;800&display=swap');
 
 @media (min-width: 600px) and (max-width: 900px) {
   .nav{
-    font-size: 0.7em;
+    font-size: 0.75em;
   }
   #tmdb-pic{
     height: 1.5em;
     width:10em;
 }
 #search-text{
-    height:2em !important;
-    width:12em !important;
+    font-size: .75em;
+    background-size: 1.5em 1.5em;  
 }
   .main-content{
+    font-size:.7em;
+  } 
+  #result-alert{
     font-size:.8em;
   } 
 }
-@media (min-width: 300px) and (max-width: 600px) {
+@media (min-width: 475px) and (max-width: 600px) {
     .nav{
       font-size: 0.5em;
     }
     #tmdb-pic{
-      height: 1em;
-      width:8em;
+      font-size: .8em;
   }
   #search-text{
-      height:1.5em !important;
-      width:8em !important;
+      font-size: .75em;
+     background-size: 1.5em 1.5em;    
+  }
+  #search-text::placeholder{
+    font-size: .75em;
   }
     .main-content{
-      font-size:.8em;
+      font-size:.7em;
     } 
     .expanded-movie{
-        font-size: .7em;
+        font-size: .75em;
     }
+    #result-alert{
+        font-size:.8em;
+      } 
+    
+  }
+  @media (min-width: 300px) and (max-width: 475px) {
+    .nav{
+      font-size: 0.5em;
+    }
+    #site-title{
+        font-size: 1.5em;
+    }
+    #tmdb-pic{
+      font-size: .8em;
+  }
+  #search-text{
+      font-size: .75em;
+     background-size: 1.5em 1.5em;    
+  }
+  #search-text::placeholder{
+    font-size: .75em;
+  }
+    .expanded-movie{
+        font-size: .75em;
+    }
+    #result-alert{
+        font-size:.8em;
+      } 
+      .main-content{
+        font-size: .9em;
+      }
+      .expansion-container{
+        font-size:.75em;
+        width: fit-content !important;
+        margin-right: 2em !important;
+        margin-left: 2em !important;
+      } 
     
   }
   
@@ -41,24 +83,29 @@
 *{
     font-family: 'Poppins', sans-serif;
 }
+
+#site-title{
+font-family: 'Poppins', sans-serif;
+font-weight: 800;
+}
+
 .nav{
     background-color: #CAF0F8;
     color: #0077B6;
     width: 100%;
-    display: flex;  
-    justify-content: space-between;
     position: fixed;
     top: 0;
     left: 0;
-    height: max-content;
-    z-index: 100;
     align-items: center;
-    padding: 1em 2em 1em 2em;
-  
+   display: grid;
+   grid-template-columns: 3fr 3fr 2fr;
+    height: 6em;
+    z-index: 100;
+    padding:1em 2em 1em 2em;
+    border-bottom: .2em solid #0077B6;
 }
-.title-container{
-    width:30%;
-}
+
+
 #search-text{
     background-image:url("./assets/magnify.png");
     background-repeat: no-repeat;
@@ -78,14 +125,14 @@
     background-color: #90E0EF;
 }
 #tmdb-pic{
-    height: 2em;
+    height:2em;
     width:12em;
 }
 body{
     background-color: #023E8A;
 }
 .main-content{
-    padding: 2em 5em 5em 5em;
+    padding: 2em 5em 2em 5em;
     display:flex;
     justify-content: center;
 }
@@ -133,15 +180,14 @@ padding-left: 2em;
     margin-right: auto;
     height:auto;
     color:#CAF0F8;
-    box-shadow: inset;
 }
 .expanded-movie{
     text-align: center;
     display: flex;
 }
 #movie-details{
-   padding-left: 3em;
-   padding-right: 3em;
+   padding-left: 2em;
+   padding-right: 4em;
    display: flex;
    flex-direction: column;
    justify-content: space-between;
